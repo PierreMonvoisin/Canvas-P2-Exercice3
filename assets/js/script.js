@@ -48,6 +48,7 @@ $(function(){
     context.strokeStyle = "#DE2204";
     context.quadraticCurveTo(200, 110, 225, 86);
     context.stroke();
+
   // Corps
   context.fillStyle = '#976F0F';
   context.fillRect(150, 100, 100, 200);
@@ -63,13 +64,36 @@ $(function(){
     context.arc(200, 160, 10, 0, 2*Math.PI);
     context.closePath();
     context.fill();
+
   // Bras
-  context.fillStyle = '#976F0F';
-  context.fillRect(40, 100, 320, 40);
+  context.beginPath();
+  context.moveTo(50, 115);
+  context.lineTo(350, 115);
+  context.lineCap = 'round';
+  context.strokeStyle= '#976F0F';
+  context.lineWidth= 30;
+  context.stroke();
+
   // Pied gauche
-  context.fillStyle = '#976F0F';
-  context.fillRect(150, 300, 40, 50);
+  context.beginPath();
+  context.moveTo(170, 300);
+  context.lineTo(170, 340);
+  context.lineCap = 'round';
+  context.strokeStyle= '#976F0F';
+  context.lineWidth= 40;
+  context.stroke();
+    // Entrejambe
+    context.beginPath();
+    context.fillStyle = '#F2F2F2';
+    context.arc(200, 300, 10, 0, 2*Math.PI);
+    context.closePath();
+    context.fill();
   // Pied droit
-  context.fillStyle = '#976F0F';
-  context.fillRect(210, 300, 40, 50);
+  context.beginPath();
+  context.moveTo(230, 300);
+  context.lineTo(230, 340);
+  context.lineCap = 'round';
+  context.strokeStyle= '#976F0F';
+  context.lineWidth= 40;
+  context.stroke();
 });
